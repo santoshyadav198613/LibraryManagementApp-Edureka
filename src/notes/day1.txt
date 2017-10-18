@@ -1,0 +1,7 @@
+To create a new solution:
+1. Go to command prompt and choose path where we want project 
+2. run "ng new <AppName>"
+
+Without using CLI:
+
+1. https://github.com/AngularClass/angular-starter
