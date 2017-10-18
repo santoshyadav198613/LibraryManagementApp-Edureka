@@ -1,0 +1,74 @@
+To upgrade angular version:
+
+npm install @angular/animations@latest @angular/common@latest @angular/compiler@latest @angular/core@latest @angular/forms@latest @angular/http@latest @angular/platform-browser@latest @angular/platform-browser-dynamic@latest @angular/router@latest core-js@latest rxjs@latest zone.js@latest --save
+
+
+1. tsconfig.json - This is typescript configuration file.
+2. package.json - to create it manually run "npm -init"
+    dependencies - contains the name of packages/library which will be used for development and as well ass required to run on production.
+    devDependencies - contains the name of packages/library which will be used for development only.
+    Run "npm install" to restore all the packages.
+    ~ => greater than or equal
+    ^ => specific version
+3. tslint.json : it will give us the warnings, in case we are not following best practices.
+4. protactor.conf.js - This is configuration file for End 2 End testing.
+5. karma.conf.js -  This i configuration file for Unit Testing.
+6. .angular-cli.json - configuration file for angualar CLI.
+
+Folders:
+1. e2e : This is older where all End 2 End test cased resides.
+2. node_modules: this is folder where all our downloaded libraries are saved.
+3. src: This is folder where all our codes are , and we will be making changes here.
+
+a. tsconfig.spec.json : This is typescript config file for our unit testing.
+b. tsconfig.app.json: This is typescript con files for our code.
+c. typings.ts : TypeDefinition file for node
+d. test.ts - This file is required by karma.conf.js and loads recursively all the .spec and framework files
+e. polyfills.ts - gives the browser compatibilty libraries.
+f. index.html - This is our mail file which will be loaded on application start.
+g. main.ts - This is entry point for angular APP. 
+
+
+Angular Modules:
+
+1. platformBrowserDynamic().bootstrapModule(AppModule); this will load the root module.
+
+
+1. app.module.ts - This is our root module, which will be loaded when app starts.
+@NgModule
+attribute/decorator/annotations:
+
+decorator : It adds extra functionlity to your class.
+
+properties:
+1.declarations : it is an array and shold be used to register component/directives and pipes.
+2.imports : It is used to register the third party libraries or angulars libraries.
+//angular.module('myApp',[]) equivalent in angualrjs
+3. providers: It is used to register the services.
+4. bootstrap : It is used to register the root component for our application.
+5. BrowserModule - This will help us to run our app on browser. It shoud be imported only once in our app.
+
+2. App Component:
+
+What is component:
+It is a dynamic html tag , which can be used anywhere in our application. So we can reuse the HTML.
+
+what it conatins:
+1. It will hava a view: app.component.html is our view
+2. It will have its metadata: It will have a component class, which will contains
+ properties and functions.
+
+properties of component:
+1. selector: this is the html tag for the component
+2. templateUrl: this is will be our view, which will contain the HTML.
+3. template :  to define inline html.
+4. styleUrls: This is to load css for component.
+5. styles: Define inline css
+
+
+application Flow: 
+
+
+1. Index.html get loaded ,and main.ts loads the root component.
+2. Root module has a root component, which is availablee via bootstrap property.
+3. The component which is mentioned in bootstrap property will be our entry component.

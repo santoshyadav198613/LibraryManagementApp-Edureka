@@ -1,0 +1,2 @@
+How to create a component:
+1. run "ng g component <componentName>"

@@ -1,0 +1,34 @@
+What is Angular
+
+1. UI framework.
+2. used to build SPA(Single Page Application).
+  We wil always be on index.html.
+3. to build Cross platform apps
+   We can create native mobile apps, desktop apps and web apps using angular.
+For Mobile: 
+    1. https://ionicframework.com/
+For Desktop:
+    1. https://universal.angular.io/
+For webapps:
+    1. https://angular.io/
+
+Why to use Angualar:
+
+1. It is a framework, complete framework for UI.
+2. uses component based approach.
+3. can be tested easily.
+
+
+Diff between Angualr1 and Angular 4:
+
+1. Angualr1 uses javascript, typescript used in angular4.
+2. scope was used to bind the data or share the model between View and component.
+3. there is no concept of digest cycle in angualr4.
+
+Diff between angular2 and Angular4.
+1. Upgraded the typescript version in angualr4.
+2. @angular/animations was part of @angular/core
+
+
+
+
