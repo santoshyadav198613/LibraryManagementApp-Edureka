@@ -1,2 +1,28 @@
 How to create a component:
 1. run "ng g component <componentName>"
+
+Binding:
+
+1. We can display any property using {{<variable_name>}} "interpolation syntax"
+
+One Way Binding:
+1. By default angular has one way data binding.
+
+
+Property Binding:
+1. we use valid property of HTML to bind the data.
+2. We use [] "Box" syntax to achieve the property Binding.
+
+
+Event Binding:
+1. For event binding we have to use () "Banana" syntax
+
+Built-in Directive:
+1. *ngIf - This will remove/add DOM element on some action.
+2. *ngFor - Will be used when we have list of records to bind.
+3. ngSwitch - This is simlar to Switc-case statement, can be useful when we are using
+same view to display data based on roles
+4. ngClass -  used to apply the css classes based on action or some business rules.
+
+To use bootstrap:
+1. http://getbootstrap.com/docs/3.3/getting-started/#download

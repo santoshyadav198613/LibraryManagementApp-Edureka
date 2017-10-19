@@ -30,5 +30,6 @@ Diff between angular2 and Angular4.
 2. @angular/animations was part of @angular/core
 
 
-
-
+Template Engine:
+1. Angular has its own template engine.
+2. the html we write is not plane HTML, they are angular template.
