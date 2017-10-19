@@ -15,22 +15,7 @@
 
 {{isVisible}}
 <button type="button" (click)="toggle()">Toggle</button> {{empList|json}}
-<table class="table">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Address</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let emp of empList">
-      <td>{{emp.id}}</td>
-      <td>{{emp.name}}</td>
-      <td [innerHtml]="emp.address"></td>
-    </tr>
-  </tbody>
-</table>
+
 
 
 <div [ngSwitch]="empRole">
@@ -53,3 +38,6 @@ break;
 case "User":
 
 bre -->
+
+
+<app-employee-list [employeeList]="empList" [title]="'Employee List Data'"></app-employee-list>

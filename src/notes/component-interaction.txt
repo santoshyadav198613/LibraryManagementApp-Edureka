@@ -1,0 +1,14 @@
+Pre-Requisite:
+Parent and child relationship between the components. 
+
+What is component interaction:
+1. The way to share some data between multiple components.
+
+Why to use component interaction:
+1. So we can share the data between multiple components.
+
+How to achieve component interaction:
+
+1. @Input()
+a. Create a property in child component, should have same datatype which we want to send from Parent
+b. pass the data using property binding.
