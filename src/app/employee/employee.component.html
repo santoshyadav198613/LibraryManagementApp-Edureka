@@ -40,4 +40,7 @@ case "User":
 bre -->
 
 
-<app-employee-list [employeeList]="empList" [title]="'Employee List Data'"></app-employee-list>
+<app-employee-list [employeeList]="empList" [title]="'Employee List Data'" (message)="receiveFromParent($event)"
+(isVisible)="fromChild($event)"></app-employee-list>
+
+{{messageFromChild}}

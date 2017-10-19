@@ -10,6 +10,7 @@ export class EmployeeComponent {
   empName = 'Pavan';
   isVisible: boolean = false;
   empRole: string = 'Admin';
+  messageFromChild: string;
   empList: any[] = [
     { id: 1, name: 'Venkata', address: 'Mumbai' },
     { id: 2, name: 'Dileep', address: 'Pune' },
@@ -20,6 +21,15 @@ export class EmployeeComponent {
 
   toggle() {
     this.isVisible = !this.isVisible;
+  }
+
+
+  receiveFromParent(message: string) {
+    this.messageFromChild = message;
+  }
+
+  fromChild(isTrue: boolean) {
+    console.log(isTrue);
   }
 
 }

@@ -9,6 +9,10 @@ Why to use component interaction:
 
 How to achieve component interaction:
 
-1. @Input()
+1. @Input() - Will be used to send data to child component
 a. Create a property in child component, should have same datatype which we want to send from Parent
 b. pass the data using property binding.
+
+2. @Output() - Will be used to send data from chile to parent components
+a. Define an EventEmitter using the @Output
+b. use event binding to handle the event in parent component
