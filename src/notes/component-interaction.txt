@@ -16,3 +16,14 @@ b. pass the data using property binding.
 2. @Output() - Will be used to send data from chile to parent components
 a. Define an EventEmitter using the @Output
 b. use event binding to handle the event in parent component
+
+ViewChild:
+1. In case we want full control over any child component
+
+DisAdvantages:
+1. Creates tight coupling between components
+
+
+ViewChildren: 
+1. In case we have multiple components placed on our html of same type, and
+we want to control all of them in TS file.

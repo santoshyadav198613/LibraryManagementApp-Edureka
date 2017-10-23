@@ -25,7 +25,7 @@
   <div *ngSwitchCase="'User'">
     This is User Panel
   </div>
-  <div *ngSwitchDefault> 
+  <div *ngSwitchDefault>
     This is default view
   </div>
 </div>
@@ -40,7 +40,13 @@ case "User":
 bre -->
 
 
-<app-employee-list [employeeList]="empList" [title]="'Employee List Data'" (message)="receiveFromParent($event)"
-(isVisible)="fromChild($event)"></app-employee-list>
+<!-- <app-employee-list [employeeList]="empList" [title]="'Employee List Data'" (message)="receiveFromParent($event)"
+(isVisible)="fromChild($event)"></app-employee-list> -->
+
+<app-employee-list [employeeList]="empList" [title]="'Employee List Data'" (message)="receiveFromParent($event)" (isVisible)="fromChild($event)"></app-employee-list>
+
+<!-- <app-employee-list></app-employee-list>
+
+<app-employee-list></app-employee-list> -->
 
 {{messageFromChild}}

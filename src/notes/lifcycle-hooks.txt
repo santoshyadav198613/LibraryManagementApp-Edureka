@@ -1,0 +1,11 @@
+
+1. constructor : Should be used to initilize the component.
+2. ngOnInit :  This is lifecycle event where we can do some binding on load.
+3. ngOnChanges : It gets called before the onInit in child and after any changes are made to the input 
+property.
+4. ngDoCheck :  This event will be called after init and after any event is fired.
+Never implement ngOnChanges and ngDoCheck both in a single component.
+5. ngAfterViewInit : To get access to all ViewChildrens, use this event, it will make sure that instances for 
+all children component is available.
+6. ngOnDestroy  :  This method is usefull to release some resources and we can also handle some
+busines  rules, like showing popup in case user has a incomplete form.

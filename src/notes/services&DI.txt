@@ -1,0 +1,25 @@
+Services:
+
+Why to use services:
+1. Reusable code.
+2. Business rules are at common place.
+3. Can be used to share some data across application.
+4. We can achieve loosely coupled system.
+
+How to create a service:
+1. run "ng g service <service-name>"
+
+Injectable(): its a decorator, which tells angular this class is a service.
+
+1. Create a service, and implment all methods
+2. Register our service using providers property
+
+3. To inject a service, use the constructor to inject a service.
+
+DI:  (Dependency Injction)
+1. Most widely used and one of the most important design pattern.
+2. We should never create an instance directly in our class.
+
+Singleton: 
+1. Only one instance of our class gets created.
+2. To make a service singleton, Register it in root module.
