@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, DoCheck, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { StudentService } from '../service/student/student.service';
+import { Student } from '../service/student/student';
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
@@ -23,12 +25,13 @@ export class EmployeeComponent implements OnInit, AfterViewInit, DoCheck, OnDest
   //   { id: 3, name: 'Anu', address: 'Banglore' }
   // ];
 
-  constructor() { }
+  constructor(private studentService: StudentService) { }
 
   ngOnInit() {
     // console.log(this.empChildComponent);
     //this.empComponent.employeeList = this.empList;
     this.empComponent.title = 'Employee List';
+    
   }
 
   toggle() {
@@ -65,6 +68,15 @@ export class EmployeeComponent implements OnInit, AfterViewInit, DoCheck, OnDest
     alert('Are you sure you want to move away from Employee?');
   }
 
+  addStudent() {
+    let student: Student = {
+      id: 5, firstName: 'Ronaldo', lastName: 'test', address: 'madrid',
+      age: 31, course: 'sports', dob: new Date('31-oct-1980') 
+    };
+
+    this.studentService.addStudent(student);
+  }
+ 
 
 
 }

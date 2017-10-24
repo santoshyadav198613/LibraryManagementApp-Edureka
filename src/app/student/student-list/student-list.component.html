@@ -2,4 +2,27 @@
   Student List
 </h1>
 
-{{students | json}}
+<table class="table">
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Course</th>
+        <th>Addres</th>
+        <th>Age</th>
+        <th>DOB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let std of students">
+      <td>{{std.id}}</td>
+      <td>{{std.firstName}}</td>
+      <td>{{std.lastName}}</td>
+      <td>{{std.course}}</td>
+      <td>{{std.address}}</td>
+      <td>{{std.age}}</td>
+      <td>{{std.dob}}</td>
+    </tr>
+  </tbody>
+</table>

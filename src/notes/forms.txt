@@ -1,0 +1,24 @@
+Forms are like necessary part of any application.
+<form> tag will be used to create a form.
+
+Dashboards apps may or may not have forms.
+
+Type Forms:
+1. Template driven Forms
+2. Reactive Forms
+
+How to use template driven forms:
+1. import { FormsModule } from '@angular/forms';
+2. add FormsModule to imports array.
+
+We can achieve 2 way data binding using ngModel.
+In 2 way data binding, values will be reflected on View and Controller as well.
+
+validation:
+1. create an instance of form tag
+
+properties:
+invalid
+valid
+pristine
+dirty

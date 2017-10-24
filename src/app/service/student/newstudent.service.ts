@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Student } from './student';
-
+import { StudentService } from './student.service';
+import { Student } from './student'
 @Injectable()
-export class StudentService {
-  studentList: Array<Student> = new Array<Student>();;
-  constructor() {
+export class NewstudentService extends StudentService {
 
+  constructor() {
+    super();
   }
 
   getStudents(): Array<Student> {
@@ -21,15 +21,9 @@ export class StudentService {
       {
         id: 3, firstName: 'Sachin', lastName: 'Kumar', course: 'Markeeting',
         address: 'Mumbai', age: 34, dob: new Date('10-Oct-1970')
-      },
-      {
-        id: 4, firstName: 'Suresh', lastName: 'Kumar', course: 'Markeeting',
-        address: 'Mumbai', age: 34, dob: new Date('10-Oct-1970')
-      },
+      }
     ];
   }
 
-  addStudent(student: Student) {
-    this.studentList.push(student);
-  }
+
 }

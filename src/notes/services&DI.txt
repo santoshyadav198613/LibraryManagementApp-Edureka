@@ -23,3 +23,12 @@ DI:  (Dependency Injction)
 Singleton: 
 1. Only one instance of our class gets created.
 2. To make a service singleton, Register it in root module.
+
+Class Based Services:
+1. Services with class
+
+{ provide: StudentService, useClass: NewstudentService } //use this syntax to Register a service.
+
+Non-Class Based Services
+1. valueProvider - httpclient
+2. factoryProvider - Routing
