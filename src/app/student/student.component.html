@@ -1,18 +1,18 @@
 <h1>
   Student Information
 </h1>
-{{student | json}}
-{{customerForm.invalid | json}}
-{{customerForm.pristine | json}}
-{{customerForm.dirty | json}}
-{{customerForm.value | json}}
-{{customerForm.valid | json}}
+{{student | json}} {{customerForm.invalid | json}} {{customerForm.pristine | json}} {{customerForm.dirty | json}} {{customerForm.value
+| json}} {{customerForm.valid | json}}
 <form #customerForm="ngForm" (submit)="addStudent(customerForm)">
   <div class="form-group">
-    <input class="form-control" required type="number" [(ngModel)]="student.id" name="id" placeholder="Student Id">
+    <input class="form-control" required #sid="ngModel" type="number" [(ngModel)]="student.id" name="id" placeholder="Student Id">
+    <div [hidden]="sid.valid" class="alert alert-danger">
+      {{sid.pristine}} {{sid.dirty}} {{sid.valid}} {{sid.invalid}} Please provide Student Id.
+    </div>
   </div>
   <div class="form-group">
-    <input class="form-control" required type="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" [(ngModel)]="student.firstName" name="fname" placeholder="First Name">
+    <input class="form-control" required type="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+      [(ngModel)]="student.firstName" name="fname" placeholder="First Name">
   </div>
   <div class="form-group">
     <input class="form-control" required type="text" [(ngModel)]="student.lastName" name="lname" placeholder="Last Name">
@@ -24,10 +24,10 @@
     <input class="form-control" required type="date" [(ngModel)]="student.dob" name="dob" placeholder="DOB">
   </div>
   <div class="form-group">
-    <input class="form-control"  type="text" [(ngModel)]="student.address" name="addr" placeholder="Address">
+    <input class="form-control" type="text" [(ngModel)]="student.address" name="addr" placeholder="Address">
   </div>
   <div class="form-group">
-    <input class="form-control"  type="text" [(ngModel)]="student.course" name="course" placeholder="Course">
+    <input class="form-control" type="text" [(ngModel)]="student.course" name="course" placeholder="Course">
   </div>
   <div>
     <button [disabled]="customerForm.invalid" type="submit" class="btn btn-primary">Add Student</button>

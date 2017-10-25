@@ -22,3 +22,22 @@ invalid
 valid
 pristine
 dirty
+
+Why to use Reactive forms:
+1. we have a complex form where we want to add control dynamically.
+2. We want to keep control in TS file.
+
+How to use Reactive forms:
+1. import ReactiveFormModule and add in imports array.
+2. import FormGroup and declare a variable of FormGroup type, which will be our form.
+3. import FormBuilder service, which will help us to create/add controls.
+4. Import FormControl to add control to the form.
+5. in case we want arrary we will use FormArray.
+
+in HTML tags to remember:
+1. formGroup
+2. formGroupName
+3. formArrayName
+4. formControlName
+
+Validation:
