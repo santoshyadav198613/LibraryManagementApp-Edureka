@@ -41,3 +41,5 @@ in HTML tags to remember:
 4. formControlName
 
 Validation:
+1 .We can use Validators class to apply inbuilt validations
+2. We can also use custom validation to achieve the same.
