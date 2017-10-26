@@ -3,14 +3,17 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
 
 import { passwordValidator } from '../customvalidator/password.validator';
 
+import { BookService } from '../service/books/book.service';
+
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
-  styleUrls: ['./books.component.css']
+  styleUrls: ['./books.component.css'],
+  providers: [BookService]
 })
 export class BooksComponent implements OnInit {
   booksForm: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private bookService: BookService) { }
 
   ngOnInit() {
     this.booksForm = this.fb.group({
@@ -44,6 +47,12 @@ export class BooksComponent implements OnInit {
   removeBook(i: number) {
     const booksControl = this.booksForm.controls['books'] as FormArray;
     booksControl.removeAt(i);
+  }
+
+  addBooks() {
+    this.bookService.addBook(this.booksForm.value);
+    //this.booksForm.reset(); //Not working with 4.4.6
+    //console.log(this.booksForm.value);
   }
 
 }

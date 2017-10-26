@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
@@ -11,6 +12,9 @@ import { StudentListComponent } from './student/student-list/student-list.compon
 import { StudentService } from './service/student/student.service';
 import { NewstudentService } from './service/student/newstudent.service';
 import { BooksComponent } from './books/books.component';
+import { PostsComponent } from './posts/posts.component';
+import { PostsListComponent } from './posts/posts-list/posts-list.component';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +23,15 @@ import { BooksComponent } from './books/books.component';
     EmployeeListComponent,
     StudentComponent,
     StudentListComponent,
-    BooksComponent
+    BooksComponent,
+    PostsComponent,
+    PostsListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   // providers: [StudentService],
   providers: [{ provide: StudentService, useClass: NewstudentService }] ,

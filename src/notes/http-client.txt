@@ -1,0 +1,38 @@
+Why to use http:
+1. To interact with our RestFul API or any third party API.
+2. To get and save the data
+
+How to use:
+1. import { HttpClientModule } from '@angular/common/http'; and add in imports array.
+
+
+To typeCast use below syntax:
+ return this.http.get<Posts[]>('http://jsonplaceholder.typicode.com/posts');
+
+To get progress of API call.
+
+const httpRequest = new HttpRequest('GET', 'http://jsonplaceholder.typicode.com/posts', { reportProgress: true });
+    return this.http.request(httpRequest);
+  }
+
+
+Observables:
+
+RxJS: Reactive Library for JS.
+1. Gives data in stream.
+2. We can show how much data is downloaded/uploaded.
+3. We can also destroy the Observables.
+4. It uses Pub/Sub pattern
+    It is a design pattern which is Publish and Subscribe.
+
+
+API:
+1. method
+2. endPoint
+3. data/response
+4. security (headers)
+
+
+HttpInterceptor:
+valueProvider:
+Routing:

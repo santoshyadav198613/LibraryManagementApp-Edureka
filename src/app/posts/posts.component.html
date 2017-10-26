@@ -1,0 +1,23 @@
+<h1>
+  Posts Form
+</h1>
+<form class="col-md-6" (submit)="addPosts()">
+  <div class="form-group">
+    <input class="form-control" type="number" name="uid" [(ngModel)]="posts.userId" placeholder="User ID">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="title" [(ngModel)]="posts.title" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="body" [(ngModel)]="posts.body" placeholder="Body">
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary">Add Posts</button>
+  </div>
+</form>
+
+
+<div class="col-md-12">
+    <hr>
+    <app-posts-list></app-posts-list>
+</div>

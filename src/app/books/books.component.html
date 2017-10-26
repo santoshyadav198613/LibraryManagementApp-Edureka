@@ -3,7 +3,7 @@
 </p>
 
 {{booksForm.value | json}}
-<form [formGroup]="booksForm">
+<form [formGroup]="booksForm" (submit)="addBooks()">
   <div class="form-group">
     <input class="form-control" type="text" name="subject" formControlName="subject" placeholder="Subject">
     <div>
@@ -28,7 +28,7 @@
       <input class="form-control" type="text" name="designation" formControlName="designation" placeholder="Designation">
     </div>
   </div>
-  <button (click)="addBook()" class="btn btn-primary">Add Book</button>
+  <button type="button" (click)="addBook()" class="btn btn-primary">Add Book</button>
   <div class="panel-group" formArrayName="books">
     <div class="panel panel-primary" *ngFor="let book of booksForm.controls.books.controls; let i = index">
       <div  class="panel-body" [formGroupName]="i">
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div>
-        <button class="btn btn-danger" (click)="removeBook(i)">Remove Book</button>
+        <button type="button" class="btn btn-danger" (click)="removeBook(i)">Remove Book</button>
       </div>
     </div>
   </div>
