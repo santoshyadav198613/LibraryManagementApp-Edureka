@@ -1,18 +1,33 @@
 <!--The whole content below can be removed with the new code.-->
-<div class="container" >
- 
-<!-- <app-employee></app-employee> -->
+<div class="container">
 
-<hr>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Library Management APP</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a routerLink="books">Books</a></li>
+        <li><a routerLink="employeee">Employee</a></li>
+        <li><a routerLink="posts">Posts</a></li>
+        <li><a routerLink="student">Student</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- <app-employee></app-employee> -->
 
-<button type="button" class="btn btn-primary" (click)="addStudent()">Add Student</button>
+  <hr>
 
-<app-student></app-student>
+  <!-- <button type="button" class="btn btn-primary" (click)="addStudent()">Add Student</button> -->
+
+  <!-- <app-student></app-student>
 
 <hr>
 <app-books></app-books>
 
 <hr>
-<app-posts></app-posts>
- 
+<app-posts></app-posts> -->
+
+  <router-outlet></router-outlet>
+
 </div>

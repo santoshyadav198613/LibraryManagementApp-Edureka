@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { PostsService } from '../service/posts/posts.service';
+
 import { Posts } from '../service/posts/posts';
 
 @Component({
@@ -17,7 +17,7 @@ export class PostsComponent implements OnInit {
   }
 
   addPosts() {
-      this.postsService.addPost(this.posts).subscribe((data) => console.log(data));
+    this.postsService.addPost(this.posts).subscribe((data) => console.log(data));
   }
 
 }

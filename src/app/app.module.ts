@@ -1,40 +1,55 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RoutingModule } from './routing/routing.module';
+import { StudentModule } from './student/student.module';
+import { PostsModule } from './posts/posts.module';
+import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeListComponent } from './employee/employee-list/employee-list.component';
-import { StudentComponent } from './student/student.component';
-import { StudentListComponent } from './student/student-list/student-list.component';
+// import { StudentComponent } from './student/student.component';
+// import { StudentListComponent } from './student/student-list/student-list.component';
 
-import { StudentService } from './service/student/student.service';
+// import { StudentService } from './service/student/student.service';
 import { NewstudentService } from './service/student/newstudent.service';
 import { BooksComponent } from './books/books.component';
-import { PostsComponent } from './posts/posts.component';
-import { PostsListComponent } from './posts/posts-list/posts-list.component';
+// import { PostsComponent } from './posts/posts.component';
+// import { PostsListComponent } from './posts/posts-list/posts-list.component';
 
+import { HttpinterceptorService } from './interceptor/httpinterceptor.service';
+import { NewinterceptorService } from './interceptor/newinterceptor.service';
+
+import { API_CONFIG, APP_CONFIG } from './service/valueProvider/value.service';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
     EmployeeListComponent,
-    StudentComponent,
-    StudentListComponent,
     BooksComponent,
-    PostsComponent,
-    PostsListComponent
+    // PostsComponent,
+    // PostsListComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    // FormsModule,
+    // ReactiveFormsModule,
+    // HttpClientModule,
+    RoutingModule,
+    StudentModule,
+    PostsModule,
+    SharedModule
   ],
   // providers: [StudentService],
-  providers: [{ provide: StudentService, useClass: NewstudentService }] ,
+  providers: [
+    //{ provide: StudentService, useClass: NewstudentService },
+    { provide: HTTP_INTERCEPTORS, useClass: HttpinterceptorService, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: NewinterceptorService, multi: true },
+    { provide: API_CONFIG, useValue: APP_CONFIG }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

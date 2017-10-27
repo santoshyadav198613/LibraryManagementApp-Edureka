@@ -1,0 +1,15 @@
+Routing:
+1. Functionality to define the routes in client side app.
+2. There will be no page reload.
+3. Navigation are importan so we can show seperate manus in app.
+
+
+How to use it.
+1. import { RouterModule } from '@angular/router'; and add in imports array.
+
+<router-outlet></router-outlet> we should place this on our root component.
+
+important things to remember:
+1. routerLink
+2. 
+

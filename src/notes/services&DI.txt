@@ -30,5 +30,13 @@ Class Based Services:
 { provide: StudentService, useClass: NewstudentService } //use this syntax to Register a service.
 
 Non-Class Based Services
-1. valueProvider - httpclient
+1. valueProvider - 
+In case we want some static data to be used as a service.
+
+we need to creata an variable which will hold the static values,
+and same values can be used across the app as service.
+
+1. create an interface with the params
+
+
 2. factoryProvider - Routing

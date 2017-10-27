@@ -1,0 +1,11 @@
+to create a mmodule:
+ng g module <module_name>
+
+1. RoutingModule:
+This is a module where we will keep routing configuration.
+
+2. Feature Modules: 
+We can have modules for each Feature , and write all configuration related to feature in its own module.
+
+3. Shared Module.
+Add all common directives/modules/components/pipes in this modules.

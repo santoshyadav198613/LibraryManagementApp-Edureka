@@ -33,6 +33,11 @@ API:
 4. security (headers)
 
 
-HttpInterceptor:
+HttpInterceptor: 
+1. If we want to set headers for all calls.
+
+we need to implement "HttpInterceptor" interface.
+
 valueProvider:
+
 Routing:
