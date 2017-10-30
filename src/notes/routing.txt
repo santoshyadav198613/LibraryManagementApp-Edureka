@@ -11,5 +11,16 @@ How to use it.
 
 important things to remember:
 1. routerLink
-2. 
+2. Router service which will be used for Navigation from typescript
 
+
+routing guards:
+What:
+1. Proide authorization to secured area.
+
+How:
+1. run "ng g guard <guardName>"
+
+types: 
+1. canActivate : to check if we can access the route.
+2. CanDeactivate: to check if we can ove away from route.

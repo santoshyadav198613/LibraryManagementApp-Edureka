@@ -22,8 +22,11 @@ import { HttpinterceptorService } from './interceptor/httpinterceptor.service';
 import { NewinterceptorService } from './interceptor/newinterceptor.service';
 
 import { API_CONFIG, APP_CONFIG } from './service/valueProvider/value.service';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LoginComponent } from './login/login.component'
 
+import { LoginService } from './service/login/login.service';
+import { AuthGuard } from './service/authguard/auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,24 +35,26 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'
     BooksComponent,
     // PostsComponent,
     // PostsListComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     // FormsModule,
     // ReactiveFormsModule,
     // HttpClientModule,
-    RoutingModule,
     StudentModule,
     PostsModule,
-    SharedModule
+    SharedModule,
+    RoutingModule
   ],
   // providers: [StudentService],
   providers: [
     //{ provide: StudentService, useClass: NewstudentService },
     { provide: HTTP_INTERCEPTORS, useClass: HttpinterceptorService, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: NewinterceptorService, multi: true },
-    { provide: API_CONFIG, useValue: APP_CONFIG }],
+    { provide: API_CONFIG, useValue: APP_CONFIG },
+    LoginService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
