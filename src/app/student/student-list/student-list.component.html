@@ -17,13 +17,14 @@
   </thead>
   <tbody>
     <tr *ngFor="let std of students">
-      <td>{{std.id}}</td>
-      <td>{{std.firstName}}</td>
-      <td>{{std.lastName}}</td>
+      <td>{{std.id | percent}}</td>
+      <td>{{std.firstName | lowercase }}</td>
+      <td>{{std.lastName |uppercase}}</td>
       <td>{{std.course}}</td>
       <td>{{std.address}}</td>
-      <td>{{std.age}}</td>
-      <td>{{std.dob}}</td>
+      <!-- <td>{{std.age | currency : 'INR' }}</td> -->
+      <td>{{std.age | money : '$' : '2' }}</td>
+      <td>{{std.dob | date : 'dd-MMM-yyyy' }}</td>
       <td>
         <button [routerLink]="[std.id]" class="btn btn-primary">Details</button>
       </td>

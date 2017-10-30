@@ -1,0 +1,13 @@
+What is pipe:
+pipes are used to transform our data.
+
+built-in types:
+1. lowercase
+2. uppercase
+3. date
+4. currency
+5. percent
+
+custom pipes:
+we can create our own pipes:
+1. run "ng g pipe <pipeName>"
