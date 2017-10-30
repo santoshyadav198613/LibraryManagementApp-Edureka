@@ -27,6 +27,8 @@ import { LoginComponent } from './login/login.component'
 
 import { LoginService } from './service/login/login.service';
 import { AuthGuard } from './service/authguard/auth.guard';
+import { PostsResolveGuard } from './service/posts/posts-resolve.guard';
+import { PostsService } from './service/posts/posts.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,7 @@ import { AuthGuard } from './service/authguard/auth.guard';
     // FormsModule,
     // ReactiveFormsModule,
     // HttpClientModule,
-    StudentModule,
+    // StudentModule,
     PostsModule,
     SharedModule,
     RoutingModule
@@ -54,7 +56,7 @@ import { AuthGuard } from './service/authguard/auth.guard';
     { provide: HTTP_INTERCEPTORS, useClass: HttpinterceptorService, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: NewinterceptorService, multi: true },
     { provide: API_CONFIG, useValue: APP_CONFIG },
-    LoginService, AuthGuard],
+    LoginService, AuthGuard, PostsResolveGuard ,PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

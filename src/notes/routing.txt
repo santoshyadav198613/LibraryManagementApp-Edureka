@@ -24,3 +24,23 @@ How:
 types: 
 1. canActivate : to check if we can access the route.
 2. CanDeactivate: to check if we can ove away from route.
+3. canActivateChild
+4. canDeactivateChild
+5. resolve: To prefetch the data.
+
+Nested Routes:
+To load multiple child components on same view.
+
+Lazy Loading:
+1. On demand loading.
+2. it should be applied to the rarely used module.
+
+Pre-requisite:
+1. we need feature module.
+2. feature module should not be part off any imports array. 
+3. if we have routing configuration in featur module, the parent route should not have 
+any url in path.
+4. we should provide the route path in routingmodule.
+5. use loadChildren propery, this will take relative path of your module and append 
+you module class name with #.
+6. feature module should not share anything with other modules/component.
