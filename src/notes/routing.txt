@@ -11,8 +11,8 @@ How to use it.
 
 important things to remember:
 1. routerLink
-2. Router service which will be used for Navigation from typescript
-
+2. "Router" service which will be used for Navigation from typescript
+3. "ActivatedRoute" service : to access querystring params.
 
 routing guards:
 What:

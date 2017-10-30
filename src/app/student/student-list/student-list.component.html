@@ -12,6 +12,7 @@
         <th>Addres</th>
         <th>Age</th>
         <th>DOB</th>
+        <th>Details</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,9 @@
       <td>{{std.address}}</td>
       <td>{{std.age}}</td>
       <td>{{std.dob}}</td>
+      <td>
+        <button [routerLink]="[std.id]" class="btn btn-primary">Details</button>
+      </td>
     </tr>
   </tbody>
 </table>
