@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RoutingModule } from './routing/routing.module';
 import { StudentModule } from './student/student.module';
 import { PostsModule } from './posts/posts.module';
@@ -43,6 +44,7 @@ import { PostsService } from './service/posts/posts.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     // FormsModule,
     // ReactiveFormsModule,
     // HttpClientModule,

@@ -9,6 +9,7 @@ import { User } from '../service/login/user';
 })
 export class LoginComponent implements OnInit {
   user: User = new User();
+  error: string;
   constructor(private loginService: LoginService,
     private router: Router) { }
 
@@ -19,6 +20,9 @@ export class LoginComponent implements OnInit {
 
     if (this.loginService.login(this.user)) {
       this.router.navigate(['posts']);
+    }
+    else {
+      this.error = 'The username or password in incorect.';
     }
   }
 }

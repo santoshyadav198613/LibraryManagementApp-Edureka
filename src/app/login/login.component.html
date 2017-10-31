@@ -2,6 +2,9 @@
   Login
 </h1>
 
+<div class="alert alert-danger">
+  {{error}}
+</div>
 <form class="col-md-6" #loginForm="ngForm" (submit)="login()">
   <div class="form-group">
     <input class="form-control" type="text" [(ngModel)]="user.userName" name="username" placeholder="UserName">
@@ -11,7 +14,7 @@
   </div>
 
   <div>
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" mat-raised-button color="primary">Login</button>
   </div>
 
 </form>

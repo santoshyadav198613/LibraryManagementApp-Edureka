@@ -9,6 +9,7 @@ import { StudentService } from '../service/student/student.service';
 import { NewstudentService } from '../service/student/newstudent.service';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { AuthGuard } from '../service/authguard/auth.guard';
+import { StudentEditComponent } from './student-edit/student-edit.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -26,8 +27,11 @@ import { AuthGuard } from '../service/authguard/auth.guard';
   declarations: [
     StudentComponent,
     StudentListComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    StudentEditComponent
   ],
+  entryComponents : [StudentEditComponent], //required in case we are adding component 
+  //at runtime for eg: Popup
   providers: [{ provide: StudentService, useClass: NewstudentService }]
 })
 export class StudentModule { }
