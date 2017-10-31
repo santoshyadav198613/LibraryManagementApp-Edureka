@@ -9,6 +9,7 @@ describe('library-management-app App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
+    console.log(page);
     expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });

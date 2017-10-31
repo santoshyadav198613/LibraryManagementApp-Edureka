@@ -1,5 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
-
+import { RouterModule, Router } from '@angular/router';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -8,6 +8,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [RouterModule],
+      providers: [Router]
     }).compileComponents();
   }));
 

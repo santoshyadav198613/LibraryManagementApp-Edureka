@@ -1,0 +1,7 @@
+1. configureTestingModule - this is similar to NgModule.
+2. describe - short desc what we are trying to test.
+3. it - our unit test cases.
+4. beforeEach -  this code will be executed before every unit test.
+
+Jasmine:- For Unit testing
+protractor: - For End to end testing

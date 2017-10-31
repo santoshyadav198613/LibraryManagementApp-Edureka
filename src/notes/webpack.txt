@@ -1,0 +1,13 @@
+1.https://webpack.js.org/
+
+you can take webpack config file out:
+1. run "ng eject"
+2.  "webpack:p": "webpack -p", for prod build gives minified files
+
+Angular CLI:
+https://cli.angular.io/
+
+Jasmine:
+https://jasmine.github.io/
+
+protractor: http://www.protractortest.org/#/
