@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Student } from './student';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class StudentService {
-  studentList: Array<Student> = new Array<Student>();;
-  constructor() {
+  studentList: Array<Student> = new Array<Student>();
+  constructor(public http: HttpClient) {
 
   }
 
@@ -31,5 +32,13 @@ export class StudentService {
 
   addStudent(student: Student) {
     this.studentList.push(student);
+  }
+
+  getStudendsDB() {
+    return this.http.get<Student[]>('http://localhost:3000');
+  }
+
+  addStudenToDB(student: Student) {
+    return this.http.post('http://localhost:3000', student);
   }
 }

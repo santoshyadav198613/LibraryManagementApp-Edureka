@@ -16,6 +16,9 @@ export class StudentComponent implements OnInit {
 
   addStudent(customerForm: any) {
     console.log(customerForm);
+    this.studentService.addStudenToDB(this.student).subscribe(
+      (data) => console.log(data)
+    );
     this.studentService.addStudent(this.student);
     this.student = new Student();
     //console.log(this.student);

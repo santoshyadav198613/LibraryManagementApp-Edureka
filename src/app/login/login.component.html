@@ -7,10 +7,12 @@
 </div>
 <form class="col-md-6" #loginForm="ngForm" (submit)="login()">
   <div class="form-group">
-    <input class="form-control" type="text" [(ngModel)]="user.userName" name="username" placeholder="UserName">
+    <input appHover [backcolor]="'yellow'" class="form-control" type="text" [(ngModel)]="user.userName" name="username" placeholder="UserName">
   </div>
   <div class="form-group">
-    <input class="form-control" type="password" [(ngModel)]="user.password" name="password" placeholder="Password">
+    <input appPassword class="form-control" type="password" [(ngModel)]="user.password" name="password" placeholder="Password" #password="ngModel">
+
+    {{password.errors | json}}
   </div>
 
   <div>
@@ -18,3 +20,4 @@
   </div>
 
 </form>
+

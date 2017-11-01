@@ -7,6 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { MoneyPipe } from '../pipes/money.pipe';
+
+import { HoverDirective } from '../directive/hover.directive';
 @NgModule({
   imports: [
     CommonModule,
@@ -24,8 +26,10 @@ import { MoneyPipe } from '../pipes/money.pipe';
     RouterModule,
     MoneyPipe,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    HoverDirective
   ],
-  declarations: [MoneyPipe]
+  declarations: [MoneyPipe,
+    HoverDirective]
 })
 export class SharedModule { }

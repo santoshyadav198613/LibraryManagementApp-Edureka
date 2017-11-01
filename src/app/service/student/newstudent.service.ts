@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { StudentService } from './student.service';
 import { Student } from './student'
+import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class NewstudentService extends StudentService {
 
-  constructor() {
-    super();
+  constructor(public http: HttpClient) {
+    super(http);
   }
 
   getStudents(): Array<Student> {

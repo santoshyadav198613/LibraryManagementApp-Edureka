@@ -1,0 +1,7 @@
+What is directive :
+Directives modifies the DOM.
+
+Types:
+1.Component - We create HTML tags.
+2.Attribute - Which modifies the behavior of DOM, and passed as attributes.
+3.Structured - ngIf, ngFor are structured directive

@@ -16,7 +16,7 @@ export class StudentListComponent implements OnInit {
     private matDialog: MatDialog) { }
 
   ngOnInit() {
-    this.students = this.studService.getStudents();
+    this.studService.getStudendsDB().subscribe((data) => this.students = data);
     //console.log(this.studService.studentList);
   }
 
