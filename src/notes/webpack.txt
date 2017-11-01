@@ -14,3 +14,6 @@ protractor: http://www.protractortest.org/#/
 
 API code:
 https://github.com/santoshyadav198613/EmployeeManagementAPI
+
+Interview Questions:
+https://github.com/santoshyadav198613/ShoppingApp-Edureka/tree/master/src/app/interview-question
