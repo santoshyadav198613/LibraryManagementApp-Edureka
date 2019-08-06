@@ -1,5 +1,7 @@
 # LibraryManagementApp
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/santoshyadav198613/LibraryManagementApp-Edureka.svg)](https://greenkeeper.io/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
 
 ## Development server
